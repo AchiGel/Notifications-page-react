@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.wrapper {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header div {
+  display: flex;
+  gap: 9px;
+}
+
+.header div h2 {
+  color: #1c202b;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.header div span {
+  padding: 1px 11px 4px;
+  border-radius: 6px;
+  background-color: #0a327b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.header button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #5e6778;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header button:hover {
+  cursor: pointer;
+  color: #0a327b;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  padding: 18px 18px 20px 18px;
+  border-radius: 8px;
+  background-color: #f7fafd;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.notification .author-pic {
+  min-width: 39px;
+  min-height: 39px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-pic img {
+  width: 39px;
+  height: 39px;
+}
+
+.notification-info .top-line {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  flex-wrap: wrap;
+}
+
+.top-line .name {
+  color: #1c202b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.name:hover {
+  cursor: pointer;
+  color: #0a327b;
+}
+
+.top-line .notification-message {
+  color: #5e6778;
+  font-size: 14px;
+  font-weight: 500;
+}
+.top-line .target-post {
+  color: #5e6778;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.target-post:hover {
+  cursor: pointer;
+  color: #0a327b;
+}
+
+.bottom-line span {
+  color: #939cad;
+  font-size: 14px;
+  font-weight: 500;
+}
