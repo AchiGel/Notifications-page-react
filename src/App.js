@@ -87,7 +87,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <Header />
+        <Header length={notifications.filter((post) => !post.read).length} />
         <div className="notifications">
           {notifications.map((item, index) => {
             return (
