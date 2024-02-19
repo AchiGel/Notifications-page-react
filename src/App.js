@@ -8,6 +8,7 @@ import kimberly from "../src/assets/images/avatar-kimberly-smith.webp";
 import mark from "../src/assets/images/avatar-mark-webber.webp";
 import nathan from "../src/assets/images/avatar-nathan-peterson.webp";
 import rizky from "../src/assets/images/avatar-rizky-hasanuddin.webp";
+import kimberlyTarget from "../src/assets/images/image-chess.webp";
 
 function App() {
   const notifications = [
@@ -17,6 +18,8 @@ function App() {
       message: "reacted to your recent post",
       post: "My first tournament today!",
       time: "1m",
+      "message-text": "",
+      "target-image": null,
     },
     {
       image: angela,
@@ -24,6 +27,8 @@ function App() {
       message: "followed you",
       post: "",
       time: "5m",
+      "message-text": "",
+      "target-image": null,
     },
     {
       image: jacob,
@@ -31,6 +36,8 @@ function App() {
       message: "has joined your group",
       post: "Chess Club",
       time: "1 day",
+      "message-text": "",
+      "target-image": null,
     },
     {
       image: rizky,
@@ -38,6 +45,9 @@ function App() {
       message: "sent you a private message",
       post: "",
       time: "5 Days",
+      "message-text":
+        "Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.",
+      "target-image": null,
     },
     {
       image: kimberly,
@@ -45,6 +55,8 @@ function App() {
       message: "commented on your picture",
       post: "",
       time: "1 Week",
+      "message-text": "",
+      "target-image": kimberlyTarget,
     },
     {
       image: nathan,
@@ -52,6 +64,8 @@ function App() {
       message: "reacted to your recent post",
       post: "5 end-game strategies to increase your win rate",
       time: "2 weeks",
+      "message-text": "",
+      "target-image": null,
     },
     {
       image: anna,
@@ -59,6 +73,8 @@ function App() {
       message: "left the group",
       post: "Chess Club",
       time: "2 weeks",
+      "message-text": "",
+      "target-image": null,
     },
   ];
   return (
@@ -75,6 +91,8 @@ function App() {
                 message={item.message}
                 post={item.post}
                 time={item.time}
+                messageText={item["message-text"]}
+                targetImage={item["target-image"]}
               />
             );
           })}

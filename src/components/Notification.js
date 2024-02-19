@@ -16,6 +16,15 @@ function Notification(props) {
             <span className="post-time">{props.time}</span> ago
           </span>
         </div>
+        <div className="message-box">
+          <p>{props.messageText}</p>
+        </div>
+      </div>
+      <div className="target-photo">
+        <img
+          src={props.targetImage}
+          alt={props.targetImage !== null ? "targetImage" : null}
+        />
       </div>
     </div>
   );
