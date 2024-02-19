@@ -1,6 +1,6 @@
 function Notification(props) {
   return (
-    <div className="notification">
+    <div className={props.read ? "notification" : "unRead"}>
       <div className="author-pic">
         <img src={props.image} alt="profile" />
       </div>
@@ -9,7 +9,7 @@ function Notification(props) {
           <h3 className="name">{props.name}</h3>
           <span className="notification-message">{props.message}</span>
           <h4 className="target-post">{props.post}</h4>
-          <button></button>
+          <button className={!props.read ? "button-unread" : "none"}></button>
         </div>
         <div className="bottom-line">
           <span>

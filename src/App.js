@@ -13,6 +13,7 @@ import kimberlyTarget from "../src/assets/images/image-chess.webp";
 function App() {
   const notifications = [
     {
+      read: false,
       image: mark,
       name: "Mark Webber",
       message: "reacted to your recent post",
@@ -22,6 +23,7 @@ function App() {
       "target-image": null,
     },
     {
+      read: false,
       image: angela,
       name: "Angela Gray",
       message: "followed you",
@@ -31,6 +33,7 @@ function App() {
       "target-image": null,
     },
     {
+      read: false,
       image: jacob,
       name: "Jacob Thompson",
       message: "has joined your group",
@@ -40,6 +43,7 @@ function App() {
       "target-image": null,
     },
     {
+      read: true,
       image: rizky,
       name: "Rizky Hasanuddin",
       message: "sent you a private message",
@@ -50,6 +54,7 @@ function App() {
       "target-image": null,
     },
     {
+      read: true,
       image: kimberly,
       name: "Kimberly Smith",
       message: "commented on your picture",
@@ -59,6 +64,7 @@ function App() {
       "target-image": kimberlyTarget,
     },
     {
+      read: true,
       image: nathan,
       name: "Nathan Peterson",
       message: "reacted to your recent post",
@@ -68,6 +74,7 @@ function App() {
       "target-image": null,
     },
     {
+      read: true,
       image: anna,
       name: "Anna Kim",
       message: "left the group",
@@ -86,6 +93,7 @@ function App() {
             return (
               <Notification
                 key={index}
+                read={item.read}
                 image={item.image}
                 name={item.name}
                 message={item.message}

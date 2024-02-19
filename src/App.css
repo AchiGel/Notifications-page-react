@@ -71,10 +71,20 @@
   position: relative;
   padding: 18px 18px 20px 18px;
   border-radius: 8px;
-  background-color: #f7fafd;
+  background-color: #fff;
   display: flex;
   align-items: center;
   gap: 19px;
+}
+
+.unRead {
+  position: relative;
+  padding: 18px 18px 20px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  background-color: #f7fafd;
 }
 
 .notification .author-pic {
@@ -116,6 +126,15 @@
   color: #5e6778;
   font-size: 14px;
   font-weight: 700;
+}
+
+.button-unread {
+  border: none;
+  background: #f65552;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 }
 
 .target-post:hover {
