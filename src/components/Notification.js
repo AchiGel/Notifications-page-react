@@ -16,7 +16,7 @@ function Notification(props) {
             <span className="post-time">{props.time}</span> ago
           </span>
         </div>
-        <div className="message-box">
+        <div className={props.messageText !== "" ? "message-box" : null}>
           <p>{props.messageText}</p>
         </div>
       </div>
