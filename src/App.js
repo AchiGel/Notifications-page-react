@@ -9,9 +9,10 @@ import mark from "../src/assets/images/avatar-mark-webber.webp";
 import nathan from "../src/assets/images/avatar-nathan-peterson.webp";
 import rizky from "../src/assets/images/avatar-rizky-hasanuddin.webp";
 import kimberlyTarget from "../src/assets/images/image-chess.webp";
+import { useState } from "react";
 
 function App() {
-  const notifications = [
+  const [notifications, setNotifications] = useState([
     {
       read: false,
       image: mark,
@@ -74,7 +75,7 @@ function App() {
       "target-image": null,
     },
     {
-      read: true,
+      read: false,
       image: anna,
       name: "Anna Kim",
       message: "left the group",
@@ -83,11 +84,22 @@ function App() {
       "message-text": "",
       "target-image": null,
     },
-  ];
+  ]);
+
+  const [markAllAsRead, setmarkAllAsRead] = useState(
+    notifications.filter((post) => !post.read).length
+  );
+
+  function handleReadStatus(e) {
+    e.preventDefault();
+    setNotifications(notifications.map((card) => ({ ...card, read: true })));
+    setmarkAllAsRead(0);
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
-        <Header length={notifications.filter((post) => !post.read).length} />
+        <Header length={markAllAsRead} handleReadStatus={handleReadStatus} />
         <div className="notifications">
           {notifications.map((item, index) => {
             return (
