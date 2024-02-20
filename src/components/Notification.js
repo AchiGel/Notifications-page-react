@@ -9,7 +9,10 @@ function Notification(props) {
           <h3 className="name">{props.name}</h3>
           <span className="notification-message">{props.message}</span>
           <h4 className="target-post">{props.post}</h4>
-          <button className={!props.read ? "button-unread" : "none"}></button>
+          <button
+            onClick={props.toggleReadStatus}
+            className={!props.read ? "button-unread" : "none"}
+          ></button>
         </div>
         <div className="bottom-line">
           <span>

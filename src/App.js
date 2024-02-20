@@ -96,6 +96,13 @@ function App() {
     setmarkAllAsRead(0);
   }
 
+  function toggleReadStatus(index) {
+    const updatedNotifications = [...notifications];
+    updatedNotifications[index].read = !updatedNotifications[index].read;
+    setNotifications(updatedNotifications);
+    setmarkAllAsRead(notifications.filter((post) => !post.read).length);
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -113,6 +120,7 @@ function App() {
                 time={item.time}
                 messageText={item["message-text"]}
                 targetImage={item["target-image"]}
+                toggleReadStatus={() => toggleReadStatus(index)}
               />
             );
           })}
