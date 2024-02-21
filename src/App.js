@@ -94,9 +94,15 @@ function App() {
   }
 
   function toggleReadStatus(index) {
-    const updatedNotifications = [...notifications];
-    updatedNotifications[index].read = !updatedNotifications[index].read;
-    setNotifications(updatedNotifications);
+    setNotifications((prevNotifications) => {
+      return prevNotifications.map((note, i) => {
+        if (i === index) {
+          return { ...note, read: !note.read };
+        } else {
+          return note;
+        }
+      });
+    });
   }
 
   return (
