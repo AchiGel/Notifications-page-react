@@ -86,21 +86,17 @@ function App() {
     },
   ]);
 
-  const [markAllAsRead, setmarkAllAsRead] = useState(
-    notifications.filter((post) => !post.read).length
-  );
+  const markAllAsRead = notifications.filter((post) => !post.read).length;
 
   function handleReadStatus(e) {
     e.preventDefault();
     setNotifications(notifications.map((card) => ({ ...card, read: true })));
-    setmarkAllAsRead(0);
   }
 
   function toggleReadStatus(index) {
     const updatedNotifications = [...notifications];
     updatedNotifications[index].read = !updatedNotifications[index].read;
     setNotifications(updatedNotifications);
-    setmarkAllAsRead(notifications.filter((post) => !post.read).length);
   }
 
   return (
