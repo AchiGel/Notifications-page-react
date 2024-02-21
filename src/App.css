@@ -138,6 +138,10 @@
   cursor: pointer;
 }
 
+.button-read {
+  visibility: hidden;
+}
+
 .target-post:hover {
   cursor: pointer;
   color: #0a327b;

@@ -11,7 +11,7 @@ function Notification(props) {
           <h4 className="target-post">{props.post}</h4>
           <button
             onClick={props.toggleReadStatus}
-            className={!props.read ? "button-unread" : "none"}
+            className={!props.read ? "button-unread" : "button-read"}
           ></button>
         </div>
         <div className="bottom-line">
